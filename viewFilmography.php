@@ -6,11 +6,10 @@
    <meta name="description" content="">
     <meta name="author" content="">
     <title>view crews</title>
-    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="sidebar-home-content-style.css" type="text/css">
     <link href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css" rel="stylesheet">
 </head>
 <body>
-    <?php include 'sidebar.php' ?>
     <div class="home_content">
     <nav class="navbar navbar-light" style="background: #11101d">
     <span class="navbar-brand mb-0 h1"><a class="text-white" style="text-decoration: none" href="../index.html">Molly-Win</a></span>
@@ -32,16 +31,17 @@
                 <tr>
                     <th scope="col">Id</th>
                     <th scope="col">Name</th>
-                    <th scope="col">Celeb Type</th>
-                    <th scope="col">Action</th>
+                    <th scope="col">Film Name</th>
+                    <th scope="col">Status</th>
                 </tr>
             </thead>
             <tbody>
             <?php
                 include '../connection.php';
-                $celebViewQuery = "SELECT * FROM celebrities";
-                $celebViewQueryResult = mysqli_query($conn,$celebViewQuery);
-                while($celebView = mysqli_fetch_assoc($celebViewQueryResult)){
+                $id = $_GET['id'];
+                $viewFilmographyQuery = "SELECT * FROM filmography WHERE id='$id'";
+                $viewFilmographyQueryResult = mysqli_query($conn,$viewFilmographyQuery);
+                while($viewFilmography = mysqli_fetch_assoc($viewFilmographyQueryResult)){
             ?>
             <tr>
             <td class='id'><?php echo $celebView['id'];?></td>

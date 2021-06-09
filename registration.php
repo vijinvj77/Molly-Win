@@ -25,28 +25,29 @@
         <form action="" method="POST" class="mt-4">
             <div class="form-group">
                 <label for="firstName">First Name:</label>
-                <input type="text" name="firstName" class="form-control">
+                <input type="text" name="firstName" class="form-control" required>
             </div>
             <div class="form-group">
                 <label for="lastName">Last Name:</label>
-                <input type="text" name="lastName" class="form-control">
+                <input type="text" name="lastName" class="form-control" required>
             </div>
             <div class="form-group">
                 <label for="phoneNumber">Phone Number:</label>
-                <input type="number" name="phoneNumber" class="form-control" pattern="[0-9]{10}" title="10 numbers required">
+                <input type="number" name="phoneNumber" class="form-control" required pattern="[0-9]{10}" title="10 numbers required">
             </div>
             <div class="form-group">
                 <label for="password">Password:</label>
-                <input type="text" name="password" class="form-control">
+                <input type="text" name="password" class="form-control" required>
             </div>
             <div class="form-group">
                 <label for="confirmPassword">Confirm Password:</label>
-                <input type="text" name="confirmPassword" class="form-control">
+                <input type="text" name="confirmPassword" class="form-control" required>
             </div>
             <button class="btn btn-primary" name="register">Register</button>
             <p>Already have an account? Please <a href="login.php">Login</a> Here</p>
         </form>
     </section>
+<?php include('registration-server.php') ?>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>   
 </body>

@@ -5,5 +5,5 @@ unset($_SESSION['firstName']);
 unset($_SESSION['lastName']);
 unset($_SESSION['phoneNumber']);
 unset($_SESSION['userType']);
-header('../login.php');
+echo "<script>window.location.href='login.php';</script>";
 ?>
