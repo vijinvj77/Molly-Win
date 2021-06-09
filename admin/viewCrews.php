@@ -1,3 +1,4 @@
+<?php include 'adminValidationCheck.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,11 +8,15 @@
     <meta name="author" content="">
     <title>view crews</title>
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="sidebar-home-content-style.css" rel="stylesheet" type="text/css">
     <link href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css" rel="stylesheet">
 </head>
 <body>
     <?php include 'sidebar.php' ?>
     <div class="home_content">
+    <nav class="navbar navbar-light" style="background: #11101d">
+    <span class="navbar-brand mb-0 h1"><a class="text-white" style="text-decoration: none" href="../index.html">Molly-Win</a></span>
+    </nav>
     <div class="navs mt-4">
     <ul class="nav justify-content-center">
         <li class="nav-item">
@@ -23,7 +28,7 @@
     </ul>
     </div>
         <h3 class="text-center mt-4">View Crew</h3>
-        <div class="container">
+        <div class="container-fluid container-md">
         <table class="table table-hover table-dark" id="example">
             <thead>
                 <tr>
@@ -59,9 +64,15 @@
   <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
   <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js"></script>
   <script>
-  $(document).ready(function() {
-    $('#example').DataTable();
-  } );
+//   $(document).ready(function() {
+//     $('#example').DataTable();
+//   } );
+$(document).ready( function () {
+  var table = $('#example').DataTable( {
+    pageLength : 5,
+    lengthMenu: [[5, 10, 20], [5, 10, 20]]
+  } )
+} );
   </script>
   <script>
   $('.view').click(function(){

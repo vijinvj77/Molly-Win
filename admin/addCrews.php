@@ -1,15 +1,20 @@
+<?php include 'adminValidationCheck.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="sidebar-home-content-style.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <title>add crew</title>
 </head>
 <body>
     <?php include 'sidebar.php' ?>
     <div class="home_content">
+    <nav class="navbar navbar-light" style="background: #11101d">
+    <span class="navbar-brand mb-0 h1"><a class="text-white" style="text-decoration: none" href="../index.html">Molly-Win</a></span>
+    </nav>
     <div class="navs mt-4">
     <ul class="nav justify-content-center">
         <li class="nav-item">
@@ -24,7 +29,7 @@
         <form action="" method="POST" class="container mt-4">
             <div class="form-group">
                 <label for="crewName">Name:</label>
-                <input type="text" name="crewName" class="form-control" pattern="[A-Za-z]{4,50}" title="Name contains only alphabets" required>
+                <input type="text" name="crewName" class="form-control" required>
             </div>
             <div class="form-group">
                 <label for="crewType">Type:</label>

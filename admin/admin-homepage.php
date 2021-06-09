@@ -1,19 +1,4 @@
-<?php
-session_start();
-if(!isset($_SESSION['phoneNumber'])){
-  echo "<script>alert('You must login to view this page');</script>";
-  echo "<script>window.location.href='login.php';</script>";
-}
-
-if(isset($_POST['logout'])){
-  session_destroy();
-  unset($_SESSION['firstName']);
-  unset($_SESSION['lastName']);
-  unset($_SESSION['phoneNumber']);
-  unset($_SESSION['userType']);
-  header('location: ../index.html');
-}
-?>
+<?php include 'adminValidationCheck.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,12 +6,16 @@ if(isset($_POST['logout'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="sidebar-home-content-style.css" type="text/css">
     <title>admin-homepage</title>
 </head>
 <body>
-<?php include 'sidebar.html'; ?>
+<?php include 'sidebar.php'; ?>
+<?php include('servers/passwordUpdationServer.php'); ?>
 <div class="home_content">
+<nav class="navbar navbar-light" style="background: #11101d">
+    <span class="navbar-brand mb-0 h1"><a class="text-white" style="text-decoration: none" href="../index.html">Molly-Win</a></span>
+    </nav>
     <h1 class="text-center mt-3">Update Profile</h1>
     <div class="container">
       <div class="container-fluid border border-dark p-4">

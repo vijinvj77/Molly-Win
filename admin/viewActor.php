@@ -1,18 +1,4 @@
-<?php
-session_start();
-if(isset($_POST['logout'])){
-  session_destroy();
-  unset($_SESSION['firstName']);
-  unset($_SESSION['lastName']);
-  unset($_SESSION['phoneNumber']);
-  unset($_SESSION['userType']);
-  header('../login.php');
-}
-if(!isset($_SESSION['phoneNumber'])){
-  echo "<script>alert('You must login to view this page');</script>";
-  echo "<script>window.location.href='../login.php';</script>";
-}
-?>
+<?php include 'adminValidationCheck.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
