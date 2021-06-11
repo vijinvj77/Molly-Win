@@ -8,7 +8,7 @@
         $password = $_POST['password'];
         $confirmPassword = $_POST['confirmPassword'];
         if($password != $confirmPassword){
-            echo "<script>alert('Password\'\s mismatch');</script>";
+            echo "<script>alert('Passwords mismatch');</script>";
             echo "<script>window.location.href='registration.php';</script>";
         }
         $phoneNumberSearchQuery = "SELECT * FROM users WHERE phoneNumber='$phoneNumber'";
@@ -24,6 +24,7 @@
                 $_SESSION['firstName'] = $firstName;
                 $_SESSION['lastName'] = $lastName;
                 $_SESSION['phoneNumber'] = $phoneNumber;
+                $_SESSION['userType'] ='user';
                 echo "<script>alert('Registration successful');</script>";
                 echo "<script>window.location.href='user/user-homepage.php';</script>";
             }

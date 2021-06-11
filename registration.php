@@ -43,7 +43,7 @@
                 <label for="confirmPassword">Confirm Password:</label>
                 <input type="password" name="confirmPassword" class="form-control" required>
             </div>
-            <button class="btn btn-primary" name="register">Register</button>
+            <button class="btn btn-primary container-fluid" name="register">Register</button>
             <p>Already have an account? Please <a href="login.php">Login</a> Here</p>
         </form>
     </section>
