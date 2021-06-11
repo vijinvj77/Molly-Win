@@ -56,7 +56,7 @@
 
         //producer Section
         $producer = $_POST['producerName'];
-        $producerListQuery = "SELECT COUNT(*) AS producerList FROM films WHERE producer ='$producer '";
+        $producerListQuery = "SELECT COUNT(*) AS producerList FROM films WHERE producer ='$producer'";
         $producerListQueryResult = mysqli_query($conn,$producerListQuery);
         $countOfproducer = mysqli_fetch_assoc($producerListQueryResult);
         $producerSuccessQuery = "SELECT COUNT(status) AS producerSuccess FROM films WHERE status='Hit' AND producer='$producer'";
@@ -80,7 +80,7 @@
 
         //music director section
         $musicDirector = $_POST['musicDirectorName'];
-        $musicDirectorListQuery = "SELECT COUNT(*) AS musicDirectorList FROM films WHERE musicDirector ='$musicDirector '";
+        $musicDirectorListQuery = "SELECT COUNT(*) AS musicDirectorList FROM films WHERE musicDirector ='$musicDirector'";
         $musicDirectorListQueryResult = mysqli_query($conn,$musicDirectorListQuery);
         $countOfmusicDirector = mysqli_fetch_assoc($musicDirectorListQueryResult);
         $musicDirectorSuccessQuery = "SELECT COUNT(status) AS musicDirectorSuccess FROM films WHERE status='Hit' AND musicDirector='$musicDirector'";
