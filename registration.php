@@ -37,11 +37,11 @@
             </div>
             <div class="form-group">
                 <label for="password">Password:</label>
-                <input type="text" name="password" class="form-control" required>
+                <input type="password" name="password" class="form-control" required>
             </div>
             <div class="form-group">
                 <label for="confirmPassword">Confirm Password:</label>
-                <input type="text" name="confirmPassword" class="form-control" required>
+                <input type="password" name="confirmPassword" class="form-control" required>
             </div>
             <button class="btn btn-primary" name="register">Register</button>
             <p>Already have an account? Please <a href="login.php">Login</a> Here</p>
